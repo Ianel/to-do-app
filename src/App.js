@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+import AddTask from './components/AddTask';
+import TasksContainer from './components/TasksContainer';
+import { MainContext } from './providers/main_provider';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>To Do App</h1>
+      <AddTask />
+      <div className="tasks-container">
+        <TasksContainer heading="Running Tasks" finished={false} />
+        <TasksContainer heading="Tasks Done" finished={true} />
+      </div>
     </div>
   );
 }

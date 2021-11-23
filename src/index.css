@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    scroll-behavior: smooth;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 1rem;
+}
+
+button {
+    border: none;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+}
+
+.app {
+    display: block;
+    margin: 0 auto;
+}
+
+.app h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+.tasks-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-task input {
+    padding: 0.5rem;
+    margin-right: 0.25rem;
+}
+
+.add-task input:focus {
+    outline: none;
+    border: 2px solid rgb(0, 185, 130);
+}
+
+.add-task button {
+    background-color: rgb(0, 185, 130);
+    color: white;
+    margin-left: 0.25rem;
+}
+
+.main-tasks {
+    width: 45vw;
+    padding: 1rem;
+    background-color: rgb(199, 199, 199);
+    margin: 1rem;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 2px 2px 15px rgb(173, 173, 173);
+    margin: 0.75rem 0rem;
+}
+
+.task-container p {
+    text-transform: capitalize;
+}
+
+.btns > * {
+    margin: 0rem 0.5rem;
+    color: white;
+}
+
+.btns button:first-of-type {
+    background-color: rgb(0, 157, 185);
+}
+
+.btns button:last-of-type {
+    background-color: rgb(185, 0, 0);
+}
+
+.marked {
+    text-decoration: line-through;
 }
